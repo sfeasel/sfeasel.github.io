@@ -1,0 +1,28 @@
+<!DOCTYPE >
+<html>
+	<head>
+		<title>Interaction Success Study Chatroom</title>
+		<meta charset="UTF-8">
+		<link href="chatStyle.css" rel="stylesheet" type="text/css">
+		<script src="chat.js" type="text/javascript"></script>
+		<script src="messages.js" type="text/javascript"></script>
+		<script src="endchat.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<script src="controller.js" type="text/javascript"></script>
+		<section id="content">
+			<div id="windowChat">
+				<header>
+					ACTIVE CHAT
+				</header>
+				<ul id="chatroom">
+				</ul>
+				<footer>
+					<form name="msgForm" action="#">
+						<input type="text" name="message" placeholder="Enter text here" size="50" autofocus><input type="button" type="button" onclick="alert('Send button disabled for observers.')" value="Send">
+					</form>
+				</footer>
+			</div>
+		</section>
+	</body>
+</html>
