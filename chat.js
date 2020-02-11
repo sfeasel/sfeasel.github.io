@@ -32,22 +32,29 @@ var Chat = function() {
 			divPic.style.backgroundImage = "url('" + msg.imageUrl + "')";
 		}
 		
+		var divName = document.createElement("div");
+		divName.className = "name";
+		divName.innerHTML = msg.name;
+		
 		var divMsg = document.createElement("div");
 		divMsg.className = "msg";
-		divMsg.innerHTML =  ((msg.name === owner) ? "<strong>Mark</strong>" : msg.name) + ":<br>" + msg.text;
+		divMsg.innerHTML =  msg.text;
 		
 		var divEnd = document.createElement("div");
 	  divEnd.className = "end";
-	  divEnd.innerHTML = "END OF BLOCK 1<br>YOUR PASSPHRASE IS 'Block 1'";
+	  divEnd.innerHTML = "END OF BLOCK 1<br>PRESS <strong>'Alt+F4'</strong> TO CONTINUE";
 	  
-
-		
+    var divType = document.createElement("div");
+    divEnd.className = "typing";
+    divEnd.innerHTML = "<span> class=\"circle scaling\"</span><span> class=\"circle scaling\"</span><span> class=\"circle scaling\"</span>";
+    
 		li.appendChild(divDate);
+		li.appendChild(divName);
 		li.appendChild(divPic);
 		li.appendChild(divMsg);
 
 		if(msg.last) {
-		  chatRoom.appendChild(divEnd)
+		  chatRoom.appendChild(divEnd);
 		} else {
 		  chatRoom.appendChild(li);
 		}
@@ -57,6 +64,7 @@ var Chat = function() {
 		var size = chatRoom.children.length * 92;
 		chatRoom.scrollTop = (size > chatHeight - padding) ? size + padding - chatHeight : 0;
 	};
+	
 	
 	_this.setOwner = function(ownerName) {
 		owner = ownerName;

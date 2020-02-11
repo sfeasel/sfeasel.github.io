@@ -5,28 +5,28 @@ var MessagingSim = function(chat) {
 	
 	var messages = [
 		{
-		"name" : "<strong>Kyle</strong>",
-		"text" : "hi I'm Kyle",
+		"name" : "Kyle",
+		"text" : "hi i'm kyle",
 		"imageUrl" : "images/male.png"
 		},
 		{
 		"name" : "Mark",
-		"text" : "hey Kyle, I'm Mark. i'm a 2nd year studying econ, wbu?",
+		"text" : "hey kyle, i'm mark. i'm a 2nd year studying econ wbu?",
 		"imageUrl" : "images/male.png"
 		},
 		{
-		"name" : "<strong>Kyle</strong>",
+		"name" : "Kyle",
 		"text" : "nice, i'm a 2nd year studying bio so what do you wanna do after college?",
 		"imageUrl" : "images/male.png"
 		},
 		{
 		"name" : "Mark",
-		"text" : "probs applying to some consulting firms, you?",
+		"text" : "probly applying to some consulting firms, you?",
 		"imageUrl" : "images/male.png"
 		},
 		{
-		"name" : "<strong>Kyle</strong>",
-		"text" : "my bf and I are both pre-med, so hopefully going to med school together",
+		"name" : "Kyle",
+		"text" : "my bf and i are both pre-med, so hopefully going to med school together",
 		"imageUrl" : "images/male.png"
 		},
 		{
@@ -42,7 +42,7 @@ var MessagingSim = function(chat) {
 	
 	function init() {
 		sendMessage();
-		messageInterval = setInterval(sendMessage, 7300);
+		messageInterval = setInterval(sendMessage, 3300);
 	}
 	
 	function sendMessage() {
